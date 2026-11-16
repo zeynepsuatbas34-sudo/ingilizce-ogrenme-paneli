@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İngilizce Öğrenme Paneli</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #10131f;
+    color: #fff;
+}
+
+.panel {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background: #171b2b;
+    padding: 30px 20px;
+}
+
+.logo {
+    color: #a78bfa;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 45px;
+}
+
+.menu a {
+    display: block;
+    color: #aab0c5;
+    text-decoration: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: #292442;
+    color: #b69cff;
+}
+
+.main {
+    flex: 1;
+    padding: 35px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.header h1 {
+    font-size: 28px;
+}
+
+.header p {
+    color: #9299b0;
+    margin-top: 8px;
+}
+
+.profile {
+    background: #252a3d;
+    padding: 12px 18px;
+    border-radius: 12px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: #1b2031;
+    padding: 23px;
+    border-radius: 16px;
+    border: 1px solid #292e42;
+}
+
+.card p {
+    color: #9299b0;
+    font-size: 14px;
+}
+
+.card h2 {
+    font-size: 28px;
+    margin: 15px 0 8px;
+    color: #b69cff;
+}
+
+.card small {
+    color: #80d6ad;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.section {
+    background: #1b2031;
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #292e42;
+}
+
+.section h2 {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.progress-item {
+    margin-bottom: 23px;
+}
+
+.progress-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #c5c9d8;
+}
+
+.progress-bar {
+    height: 10px;
+    background: #30354a;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #a78bfa;
+    border-radius: 20px;
+}
+
+.goal {
+    text-align: center;
+}
+
+.circle {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    border: 10px solid #a78bfa;
+    border-right-color: #353950;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px auto;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.goal p {
+    color: #aab0c5;
+    line-height: 1.7;
+}
+
+.activities {
+    margin-top: 22px;
+}
+
+.activity {
+    background: #252a3d;
+    padding: 17px;
+    border-radius: 12px;
+    margin-top: 12px;
+    color: #d7d9e5;
+}
+
+@media(max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+    .panel {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .main {
+        padding: 18px;
+    }
+    .header {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+
+<aside class="sidebar">
+    <div class="logo">✦ Dil Akademim</div>
+
+    <nav class="menu">
+        <a href="#" class="active">⌂ Ana Sayfa</a>
+        <a href="#">▣ Derslerim</a>
+        <a href="#">◷ Çalışma Takvimim</a>
+        <a href="#">▤ İlerlemem</a>
+        <a href="#">⚙ Ayarlar</a>
+    </nav>
+</aside>
+
+<main class="main">
+
+    <header class="header">
+        <div>
+            <h1>Hoş geldin! 👋</h1>
+            <p>İngilizce öğrenme yolculuğuna devam et.</p>
+        </div>
+        <div class="profile">👤 Öğrenci</div>
+    </header>
+
+    <div class="cards">
+
+        <div class="card">
+            <p>Genel İlerleme</p>
+            <h2>%92</h2>
+            <small>▲ Gelişimin devam ediyor</small>
+        </div>
+
+        <div class="card">
+            <p>Tamamlanan Dersler</p>
+            <h2>48</h2>
+            <small>Toplam ders sayısı</small>
+        </div>
+
+        <div class="card">
+            <p>Çalışma Süresi</p>
+            <h2>36 Saat</h2>
+            <small>Toplam öğrenme süresi</small>
+        </div>
+
+        <div class="card">
+            <p>Kelime Sayısı</p>
+            <h2>850</h2>
+            <small>Öğrenilen kelimeler</small>
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <section class="section">
+            <h2>📊 Öğrenme İlerlemen</h2>
+
+            <div class="progress-item">
+                <div class="progress-title">
+                    <span>Kelime Bilgisi</span>
+                    <span>%85</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width:85%"></div>
+                </div>
+            </div>
+
+            <div class="progress-item">
+                <div class="progress-title">
+                    <span>Gramer</span>
+                    <span>%75</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width:75%"></div>
+                </div>
+            </div>
+
+            <div class="progress-item">
+                <div class="progress-title">
+                    <span>Dinleme</span>
+                    <span>%65</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width:65%"></div>
+                </div>
+            </div>
+
+            <div class="progress-item">
+                <div class="progress-title">
+                    <span>Konuşma</span>
+                    <span>%55</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width:55%"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section goal">
+            <h2>🎯 Haftalık Hedefim</h2>
+            <div class="circle">%92</div>
+            <p>Bu haftaki hedefinin büyük bölümünü tamamladın!</p>
+        </section>
+
+    </div>
+
+    <section class="section activities">
+        <h2>📚 Son Etkinliklerim</h2>
+        <div class="activity">✓ Günlük kelime çalışması tamamlandı</div>
+        <div class="activity">✓ Gramer dersi tamamlandı</div>
+        <div class="activity">✓ Dinleme alıştırması tamamlandı</div>
+    </section>
+
+</main>
+</div>
+
+</body>
+</html>
